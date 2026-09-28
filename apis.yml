@@ -1,31 +1,82 @@
 aid: eaglevirtual
+
 name: Eagle Virtual
+
+image: https://eaglevirtual.com/static/images/og-default.png
+
 description: 'Eagle Virtual is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
   and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/eaglevirtual/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/eaglevirtual-hosts.yml
+- type: Vendors
+  url: vendors/eaglevirtual-vendors.yml
+- type: TermsOfService
+  url: https://eaglevirtual.com/terms
+- type: StatusPage
+  url: https://eaglevirtual.com/status
+- type: Security
+  url: https://eaglevirtual.com/security
+- type: PrivacyPolicy
+  url: https://eaglevirtual.com/privacy
+- type: Pricing
+  url: https://eaglevirtual.com/pricing
+- type: VulnerabilityDisclosure
+  url: security/eaglevirtual-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/eaglevirtual-domain-security.yml
 - type: Website
   url: https://eaglevirtual.com/
 - type: Documentation
   url: https://eaglevirtual.com/api
+
+apis: []
+
 x-submission-notes: 'On-chain record of stablecoin freezes/seizes (Tether, Circle, others) across 41 chains.
   LIST BOTH: REST API (OpenAPI https://eaglevirtual.com/v1/openapi.json, free key on the Free plan) AND
   remote MCP https://mcp.eaglevirtual.com/mcp (Streamable HTTP, no key, six read-only tools; docs /mcp;
   official MCP Registry com.eaglevirtual/...).'
+
 x-submission-probe: '2026-09-28: root 200, invented 404, llms 200, /api 200'
+
 x-submitted-by: hello@eaglevirtual.com (apis.io/add, 2026-09-27)
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: Cloudflare presents a JavaScript challenge for https://eaglevirtual.com/v1/openapi.json, blocking access.
+  evidence:
+    - url: https://eaglevirtual.com/v1/openapi.json
+      status: 403
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

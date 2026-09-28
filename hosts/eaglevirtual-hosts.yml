@@ -1,0 +1,46 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 2
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - website
+hosts:
+- host: api.eaglevirtual.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: eaglevirtual.com
+  role: api
+  relation: own
+- host: eaglevirtual.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - spec-found
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - StatusPage
+  - Security
+  - PrivacyPolicy
+  - Pricing
+  - Website
+  - Documentation
+  serves:
+  - docs
+  - spec
+  - cdn
+  vendor: cloudflare
+  registrable_domain: eaglevirtual.com
+  role: website
+  relation: own
