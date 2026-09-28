@@ -1,0 +1,31 @@
+aid: eaglevirtual
+name: Eagle Virtual
+description: 'Eagle Virtual is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/eaglevirtual/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-09-28'
+modified: '2026-09-28'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://eaglevirtual.com/
+- type: Documentation
+  url: https://eaglevirtual.com/api
+x-submission-notes: 'On-chain record of stablecoin freezes/seizes (Tether, Circle, others) across 41 chains.
+  LIST BOTH: REST API (OpenAPI https://eaglevirtual.com/v1/openapi.json, free key on the Free plan) AND
+  remote MCP https://mcp.eaglevirtual.com/mcp (Streamable HTTP, no key, six read-only tools; docs /mcp;
+  official MCP Registry com.eaglevirtual/...).'
+x-submission-probe: '2026-09-28: root 200, invented 404, llms 200, /api 200'
+x-submitted-by: hello@eaglevirtual.com (apis.io/add, 2026-09-27)
